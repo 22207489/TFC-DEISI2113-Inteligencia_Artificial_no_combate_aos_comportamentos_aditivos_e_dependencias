@@ -12,6 +12,7 @@ df_programa = df_utentes[df_utentes['prog_consumo'] == True]
 contagem_programa = df_utentes['prog_consumo'].fillna('Não definido').value_counts()
 contagem_programa.index = contagem_programa.index.map({True: 'Sim', False: 'Não', 'Não definido': 'Não'})
 
+
 # Gráfico: No Programa
 plt.figure(figsize=(8,6))
 ax = contagem_programa.plot(kind='bar', color='mediumseagreen')
