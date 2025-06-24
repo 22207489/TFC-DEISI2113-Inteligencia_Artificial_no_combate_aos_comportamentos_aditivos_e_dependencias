@@ -23,6 +23,7 @@ colunas_escalonar = ['media_dose_reducao', 'media_periodo_reducao',
 scaler = StandardScaler()
 df[colunas_escalonar] = scaler.fit_transform(df[colunas_escalonar])
 
+
 # 3. Features e target
 X = df.drop(columns=['saida_sem_retorno_abandono', 'saida_sem_retorno_motivo', 'ativo_atualmente'])
 y = df['saida_sem_retorno_abandono']
